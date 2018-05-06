@@ -1,0 +1,151 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="row content">
+            <div class="col-sm-3 mt-5">
+                <div class="bg-light">
+                    <label for="" class="h3 m-3">Сортировка</label>
+                    <div class="list-group">
+                        <a href="{%  url 'posts:sort' %}" class="list-group-item list-group-item-action">Дорогие</a>
+                        <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
+                        <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
+                        <a href="#" class="list-group-item list-group-item-action disabled">Vestibulum
+                            ateros</a>
+                    </div>
+                </div>
+
+                <div class="bg-light mt-4">
+                    <label for="" class="h3 m-3">Новые анкеты</label>
+                    <hr>
+                    {% for t in instance %}
+                        {% if t.user_is_active == True and t.admin_is_active == True%}
+                        <div class="media m-3">
+                            {% if t.image_1 %}
+                                <img class="card-img"
+                                     src="{{ MEDIA_URL }}{{ t.image_1.url }}"
+                                     alt="Card image cap"
+                                     style="max-height:64px; max-width: 64px; float: left;">
+                            {% endif %}
+                            <div class="media-body">
+                                <h5 class="ml-4">{{ t.Name }}
+                                    <small class="h7"><i>{{ t.age }}</i></small>
+                                </h5>
+                                <div class="body-descrit">
+                                    <table class="col justify-content-center">
+                                        <tbody>
+                                        <tr for="">
+                                            <td><i>Рост: </i></td>
+                                            <td><i>Вес: </i></td>
+                                            <td><i>Грудь: </i></td>
+                                        </tr>
+                                        <tr for="">
+                                            <td>{{ t.height }} см</td>
+                                            <td>{{ t.height }} кг</td>
+                                            <td>{{ t.height }}</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+{#            end left bar#}
+            </div>
+
+
+            <div class="col-sm-9 col-lg-9 col-md-9 mt-4">
+                <div class="row">
+                    {% for t in instance %}
+                        {% if t.user_is_active and t.admin_is_active%}
+                        <div id="instafeed"></div>
+                        <!-- The following HTML will be our template inside instafeed -->
+                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 " style="padding-top: 20px ;">
+                            <div class="card">
+                                <div class="card-header"><a href="{{ t.get_absolute_url }}">{{ t.Name }}</a>
+                                    <label class="float-right">{{ t.age }} лет</label></div>
+                                <div class="article-conteiner" style="">
+                                    <div class="photo-box">
+                                        <div class="image-wrap">
+                                            {% if t.image_1 %}
+                                                <img class="card-img"
+                                                     src="{{ MEDIA_URL }}{{ t.image_1.url }}"
+                                                     alt="Card image cap" style="max-height:300px;">
+                                            {% endif %}
+                                            {#                                                    {% if comment.count > 0 %}#}
+                                            <div class="likes">Prime</div>
+                                            {#                                                    {% endif %}#}
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="description">
+                                            <h2><a href="tel:"> {{ t.phone }}</a></h2>
+                                        </div>
+                                        <hr style="margin-bottom: 5px; margin-top: 5px;">
+                                        <div class="body-descrit">
+                                            <table class="col justify-content-center">
+                                                <tbody>
+                                                <tr for="">
+                                                    <td><i>Рост: </i></td>
+                                                    <td><i>Вес: </i></td>
+                                                    <td><i>Грудь: </i></td>
+                                                </tr>
+                                                <tr for="">
+                                                    <td>{{ t.height }} см</td>
+                                                    <td>{{ t.height }} кг</td>
+                                                    <td>{{ t.height }}</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <hr style="margin-bottom: 5px; margin-top: 5px;">
+                                        <p></p>
+                                        <div class="price-list">
+                                            <table class="col price-table">
+                                                <thead>
+                                                <th>Время</th>
+                                                <th>Выезд</th>
+                                                <th>Аппартмент</th>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td>1-Час</td>
+                                                    <td>{{ t.outside_1 }}</td>
+                                                    <td>{{ t.appart_1 }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td scope="row">2-Час</td>
+                                                    <td>{{ t.outside_1 }}</td>
+                                                    <td>{{ t.appart_2 }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td scope="row">Ночь</td>
+                                                    <td>{{ t.outside_nigth }}</td>
+                                                    <td>{{ t.appart_night }}</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="card-footer date">
+                                    <small>Обновление: {{ t.update | timesince }}</small>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        {% endif %}
+                    {% endfor %}
+                    {#                end col sm 9#}
+                </div>
+            </div>
+        </div>
+
+
+
+
+{% endblock content %}

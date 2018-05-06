@@ -1,0 +1,132 @@
+{% load staticfiles %}
+{#{% load crispy_forms_tags %}#}
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}{{ title }}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static "libs/bootstrap/css/bootstrap-grid.min.css" %}">
+    <link rel="stylesheet" href="{% static "css/main.css" %}">
+    <link rel="stylesheet" href="{% static "css/_media.css" %}">
+    <link rel="stylesheet" href="{% static "css/lightslider.min.css" %}">
+    <link rel="stylesheet" href="{% static "libs/bootstrap/css/bootstrap.min.css" %}">
+    <link rel="stylesheet" href="{% static "libs/bootstrap/css/bootstrap-reboot.min.css" %}">
+    <link rel="stylesheet" href="{% static "libs/animate/animate.css" %}">
+    {#<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">#}
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"
+          integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+    {#    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">#}
+    {#    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"#}
+    {#          integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">#}
+</head>
+<body>
+<div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <form method="post" action="">{% csrf_token %}
+                <input type="submit" class="btn btn-default" value="Log in">
+            </form>
+        </div>
+    </div>
+</div>
+<header>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container " style="">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{% url 'posts:list' %}">Home <span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Test</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#">Disabled</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ">
+                    <li class="auth float-right">
+                        {% if  request.user.is_authenticated %}
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'posts:profile' %}">Мой профиль</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="{% url 'posts:logout' %}">Выйти</a>
+                            </li>
+                        {% else %}
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'posts:login' %}">Войти</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="{% url 'posts:kattaluu' %}">Регистрация</a>
+                            </li>
+                        {% endif %}
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    {#    </div>#}
+
+</header>
+<div class="container">
+    {% block content %}
+
+    {% endblock %}
+</div>
+<footer class="container-fluid">
+    <p>Footer Text</p>
+</footer>
+
+
+<script type="text/javascript" src="{% static 'js/common.js' %}"></script>
+<script type="text/javascript" src="{% static 'libs/animate/animate-css.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/lightslider.js' %}"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+        integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+        crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    // Script to hide/show menu
+    var button = document.querySelector('.replay-comment-btn');
+    var menu = document.querySelector('#comment-box');
+    button.addEventListener('click', function (event) {
+            if (menu.style.display == "") {
+                menu.style.display = "none";
+                button.innerHTML = "Show Menu";
+            } else {
+                menu.style.display = "";
+                button.innerHTML = "Hide Menu";
+            }
+        }
+    );
+    var checks = document.querySelector('#id_anal_sex');
+
+    checks.addEventListener('check', function validate(event) {
+
+            alert("Ok")
+
+    });
+window.onload(function () {
+
+    function validate() {
+        }
+</script>
+</body>
+</html>
+

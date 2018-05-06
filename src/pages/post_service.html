@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+{#     <h1>ADD NEW POST</h1><br>#}
+    <header></header>
+        <div class=" row justify-content-center mt-5">
+            <div class="col-md-7">
+                <div class="card-body bg-light">
+                    <form action="." method="post">
+                        {% csrf_token %}
+
+                    </form>
+                </div>
+            </div>
+        </div>
+{% endblock %}

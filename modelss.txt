@@ -1,0 +1,136 @@
+﻿    main_classic  = models.BooleanField(default=False)
+    main_blowJob_w_condom = models.BooleanField(default=False)
+    main_cunni = models.BooleanField(default=False)
+    main_group_sex = models.BooleanField(default=False)
+    main_lesbi_lesbi = models.BooleanField(default=False)
+
+    mbr = models.BooleanField(default=False)
+    mbr_price = models.TextField(max_length=10, null=False, blank=True)
+    anal_sex = models.BooleanField(default=False)
+    anal_sex_price = models.TextField(max_length=10, null=False, blank=True )
+
+    dop_end_mouth = models.BooleanField(default=False)
+    dop_end_face = models.BooleanField(default=False)
+    dop_glub_minet = models.BooleanField(default=False)
+    dop_toys = models.BooleanField(default=False)
+    dop_role_game = models.BooleanField(default=False)
+    dop_couple_service = models.BooleanField(default=False)
+    dop_video = models.BooleanField(default=False)
+    dop_company = models.BooleanField(default=False)
+    massage_relax = models.BooleanField(default=False)
+    massage_classic = models.BooleanField(default=False)
+    massage_profi = models.BooleanField(default=False)
+    massage_tiski = models.BooleanField(default=False)
+    massage_prostat = models.BooleanField(default=False)
+    massage_erotic = models.BooleanField(default=False)
+    massage_sakura = models.BooleanField(default=False)
+
+    dance_profi = models.BooleanField(default=False)
+    dance_NoProfi = models.BooleanField(default=False)
+    dance_lesbi_show = models.BooleanField(default=False)
+    dance_lisbi = models.BooleanField(default=False)
+
+    sado_bandaj = models.BooleanField(default=False)
+    sado_gospoja = models.BooleanField(default=False)
+    sado_rabyn = models.BooleanField(default=False)
+    sado_dominant = models.BooleanField(default=False)
+    sado_porka = models.BooleanField(default=False)
+    sado_fetish = models.BooleanField(default=False)
+    sado_trampling = models.BooleanField(default=False)
+
+    extsrim_anilingus = models.BooleanField(default=False)
+    extsrim_dojd_out = models.BooleanField(default=False)
+    extsrim_dojd_in = models.BooleanField(default=False)
+    extsrim_strapon = models.BooleanField(default=False)
+    extsrim_fisting_anal = models.BooleanField(default=False)
+    extsrim_fisting_vagin = models.BooleanField(default=False)
+	
+	
+	
+	            "main_classic", "main_blowJob_w_condom", "main_cunni", "main_group_sex", "main_lesbi_lesbi",
+
+            "mbr", "mbr_price", "anal_sex", "anal_sex_price",
+
+            "dop_end_mouth",
+            "dop_end_face",
+            "dop_glub_minet",
+            "dop_toys",
+            "dop_role_game",
+            "dop_couple_service",
+            "dop_video",
+            "dop_company",
+            "massage_relax",
+            "massage_classic",
+            "massage_profi",
+            "massage_tiski",
+            "massage_prostat",
+            "massage_erotic",
+            "massage_sakura",
+            "dance_profi",
+            "dance_NoProfi",
+            "dance_lesbi_show",
+            "dance_lisbi",
+            "sado_bandaj",
+            "sado_gospoja",
+            "sado_rabyn",
+            "sado_dominant",
+            "sado_porka",
+            "sado_fetish",
+            "sado_trampling",
+            "extsrim_anilingus",
+            "extsrim_dojd_out",
+            "extsrim_dojd_in",
+            "extsrim_strapon",
+            "extsrim_fisting_anal",
+            "extsrim_fisting_vagin",
+			
+			
+			
+			
+			
+			
+			
+			
+	main_classic= forms.CharField(label='Класический ', widget=forms.CheckboxInput())
+    main_blowJob_w_condom= forms.CharField(label='Минет с презирвативом', widget=forms.CheckboxInput())
+    main_cunni= forms.CharField(label='Кунилингус', widget=forms.CheckboxInput())
+    main_group_sex= forms.CharField(label='Групповой секс', widget=forms.CheckboxInput())
+    main_lesbi_lesbi= forms.CharField(label='Лесбийский секс', widget=forms.CheckboxInput())
+
+    dop_end_mouth = forms.CharField(label='Кончить в рот', widget=forms.CheckboxInput())
+    dop_end_face= forms.CharField(label='Кончить в лицо', widget=forms.CheckboxInput())
+    dop_glub_minet= forms.CharField(label='Глубокий миньет', widget=forms.CheckboxInput())
+    dop_toys= forms.CharField(label='Игрушки', widget=forms.CheckboxInput())
+    dop_role_game= forms.CharField(label='Ролевые игры', widget=forms.CheckboxInput())
+    dop_couple_service= forms.CharField(label='Услиги супружиским парам', widget=forms.CheckboxInput())
+    dop_video= forms.CharField(label='Фото/Видео съемки', widget=forms.CheckboxInput())
+    dop_company= forms.CharField(label='Сопровождение', widget=forms.CheckboxInput())
+
+    massage_relax= forms.CharField(label='Раслобляющий массаж', widget=forms.CheckboxInput())
+    massage_classic= forms.CharField(label='Классический массаж', widget=forms.CheckboxInput())
+    massage_profi= forms.CharField(label='Проффесиональный массаж', widget=forms.CheckboxInput())
+    massage_tiski= forms.CharField(label='Тайский массаж', widget=forms.CheckboxInput())
+    massage_prostat= forms.CharField(label='Массаж простаты', widget=forms.CheckboxInput())
+    massage_erotic= forms.CharField(label='Эротический массаж', widget=forms.CheckboxInput())
+    massage_sakura= forms.CharField(label='Ветка сакуры', widget=forms.CheckboxInput())
+    dance_profi= forms.CharField(label='Стритиз проффесиональный', widget=forms.CheckboxInput())
+    dance_NoProfi= forms.CharField(label='Стриптиз не профи', widget=forms.CheckboxInput())
+    dance_lesbi_show= forms.CharField(label='Откровенное лесби-шоу', widget=forms.CheckboxInput())
+    dance_lisbi= forms.CharField(label='Легкое лесби шоу', widget=forms.CheckboxInput())
+    sado_bandaj= forms.CharField(label='Бандаж', widget=forms.CheckboxInput())
+    sado_gospoja= forms.CharField(label='Госпожа', widget=forms.CheckboxInput())
+    sado_rabyn= forms.CharField(label='Рабыня', widget=forms.CheckboxInput())
+    sado_dominant= forms.CharField(label='Лекая доминация', widget=forms.CheckboxInput())
+    sado_porka= forms.CharField(label='Порка', widget=forms.CheckboxInput())
+    sado_fetish= forms.CharField(label='Фетиш', widget=forms.CheckboxInput())
+    sado_trampling= forms.CharField(label='Трамплинг', widget=forms.CheckboxInput())
+    extsrim_anilingus= forms.CharField(label='Анилингус', widget=forms.CheckboxInput())
+    extsrim_dojd_out= forms.CharField(label='Золой дождь выдача', widget=forms.CheckboxInput())
+    extsrim_dojd_in= forms.CharField(label='Золотой дождь прием', widget=forms.CheckboxInput())
+    extsrim_strapon= forms.CharField(label='Страпон', widget=forms.CheckboxInput())
+    extsrim_fisting_anal= forms.CharField(label='Фистинг анальный', widget=forms.CheckboxInput())
+    extsrim_fisting_vagin= forms.CharField(label='Фистинг вагинальный', widget=forms.CheckboxInput())
+    mbr= forms.CharField(label='Миньет без презерватива', widget=forms.CheckboxInput())
+    mbr_price= forms.CharField(label='', widget=forms.TextInput())
+    anal_sex= forms.CharField(label='Анальный секс', widget=forms.CheckboxInput())
+    anal_sex_price= forms.CharField(label='', widget=forms.TextInput())
