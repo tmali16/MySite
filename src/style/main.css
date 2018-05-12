@@ -1,0 +1,155 @@
+body{
+    /*background: url("/static/img/bg3.jpg")  #0f0f0f  ;*/
+    background-color: #adadad !important;
+    /*height: 100% !important;*/
+
+    /*!* Center and scale the image nicely *!*/
+    /*background-position: center !important;*/
+    /*background-repeat: no-repeat !important;*/
+    /*background-size: cover !important;*/
+}
+* {
+    position: relative;
+    box-sizing: border-box;
+}
+header {
+    max-height: 600px;
+    height: 50px;
+    overflow: hidden;
+}
+hr{
+    margin-top: 10px;
+    margin-bottom:10px;
+}
+.instagram-content {
+    padding-top: 50px;
+    /*background: #9b9b9b;*/
+}
+.photo-box{
+    margin: 0px 0px 0px 0px;
+}
+.img-wrap .img-top{
+    width: 100%;
+    height: 370px !important;
+    border-radius: 0;
+    /*border-top-left-radius: 0;*/
+    /*border-top-right-radius: 0;*/
+}
+
+.likes {
+    position: absolute;
+    bottom: 5px;
+    left: 15px;
+    padding: 5px;
+    /*background: #000;*/
+    background: rgba(0, 179, 255, 0.49);
+    color: white;
+}
+.article-conteiner{
+    background-color: #f5f5f5;
+    padding: 10px;
+}
+.photo-box .description {
+    /*font-family: $ sub-font;*/
+    font-size: 12px;
+    background: #163d6e;
+    color: #9b9b9b;
+    letter-spacing: 1px;
+    padding: 15px;
+    height: 75px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+/*.instagram-content h3 {*/
+        /*text-transform: uppercase;*/
+        /*letter-spacing: 0.5em;*/
+        /*font-size: 12px;*/
+        /*font-weight: 700;*/
+        /*text-align: center;*/
+        /*padding: 20px;*/
+        /*color: darken(#eeeeee, 20%);*/
+    /*}*/
+
+.def-bg{
+    background-color: #245580;
+}
+.profile-contetn{
+    margin-top: 100px;
+    background-color: #117a8b;
+}
+.photo-container{
+    position: relative;
+    width: 300px;
+    float: left;
+}
+.anketa-header{
+    /*padding-top:    20px;*/
+    padding-bottom:    20px;
+    /*border-bottom: 1px solid;*/
+}
+.card-body{
+    padding: 5px !important;
+}
+.phone{
+    background-color: #007bff;
+    padding: 10px 10px 10px 10px;
+}
+.article-conteiner{
+    /*background-color: rgb(204, 204, 208);*/
+}
+.price-table{
+    text-align: center;
+}
+.price-list, .price-table table{
+    font-size: 14px;
+    background-color: rgba(162, 163, 172, 0.26);
+    /*border: .1px solid #728b99;*/
+}
+.price-list, .price-table thead{
+    background-color: rgba(162, 163, 172, 0.40);
+    font-size: 14px;
+
+}
+.price-list, .price-table tbody td{
+    border-bottom: 0.1px solid #728b99;
+    /*border-left: 0.1px solid #fff;*/
+}
+.body-descrit table{
+    font-size: 12px;
+    text-align: center;
+}
+#div_id_content{
+    /*height: 50px;*/
+    resize: none;
+
+}
+.blockquote{
+    padding-left: 10px;
+    border-left: 2px solid #007bff;
+}
+.reblockquote{
+    margin-left: 50px;
+    padding-left: 10px;
+    border-left: 2px inset #00ffc4;
+}
+#myModal{
+    height: 100%;
+}
+#id_mbr_price{
+    width: 50%;
+    display: inline-block;
+}
+.border{
+    border: 1px solid #007bff !important;
+}
+.help-block{
+    font-size: 12px;
+
+}
+.help-block p{
+    margin-bottom: 0rem;
+}
+.card-body{
+    font-size: 12px;
+}
